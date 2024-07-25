@@ -5,25 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mike's Etch-A-Sketch</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <h1 class="title">Mike's Etch-A-Sketch</h1>
     <div class="middle-container">
         <div class="left-container">
             <div class="upper-container">
-                <button class="color">Color</button>
-                <button class="background-color">Background Color</button>
+                <button class="color">
+                    Color
+                    <div class="color-indicator"></div>
+                </button>
+                <button class="background-color">
+                    Background Color
+                    <div class="color-indicator"></div>
+                </button>
             </div>
             <div class="lower-container">
                 <button class="eraser">Toggle Eraser</button>
-                <button class="shading">Toggle Shading</button>
                 <button class="rainbow">Toggle Rainbow</button>
             </div>
         </div>
         <div class="etch-a-sketch"></div>
     </div>
     <div class="slidecontainer">
-        <input type="range" min="2" max="100" value="51" class="slider" id="myRange">
+        <input type="range" min="2" max="64" value="33" class="slider" id="myRange">
+        <p class="slider-value"></p>
     </div>
 </body>
 </html>
