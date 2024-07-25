@@ -1,8 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    gap: 40px;
+    min-height: 100vh;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
 }
 
 .title {
@@ -60,6 +73,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     align-self: center;
     width: 600px;
 }
@@ -96,4 +110,16 @@ body {
     height: 25px;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.footer {
+    background-color: #1a1a1a;
+    font-size: 30px;
+    padding: 30px;
+    color: aliceblue;
+    text-align: center;
+}
+
+.footer a {
+    color: aliceblue;
 }

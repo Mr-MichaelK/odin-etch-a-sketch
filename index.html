@@ -9,28 +9,35 @@
 </head>
 <body>
     <h1 class="title">Mike's Etch-A-Sketch</h1>
-    <div class="middle-container">
-        <div class="left-container">
-            <div class="upper-container">
-                <button class="color">
-                    Color
-                    <div class="color-indicator"></div>
-                </button>
-                <button class="background-color">
-                    Background Color
-                    <div class="color-indicator"></div>
-                </button>
+    <div class="main-content">
+        <div class="middle-container">
+            <div class="left-container">
+                <div class="upper-container">
+                    <button class="color">
+                        Color
+                        <div class="color-indicator"></div>
+                    </button>
+                    <button class="background-color">
+                        Background Color
+                        <div class="color-indicator"></div>
+                    </button>
+                </div>
+                <div class="lower-container">
+                    <button class="eraser">Toggle Eraser</button>
+                    <button class="rainbow">Toggle Rainbow</button>
+                </div>
             </div>
-            <div class="lower-container">
-                <button class="eraser">Toggle Eraser</button>
-                <button class="rainbow">Toggle Rainbow</button>
-            </div>
+            <div class="etch-a-sketch"></div>
         </div>
-        <div class="etch-a-sketch"></div>
+        <div class="slidecontainer">
+            <input type="range" min="2" max="64" value="33" class="slider" id="myRange">
+            <p class="slider-value"></p>
+        </div>
     </div>
-    <div class="slidecontainer">
-        <input type="range" min="2" max="64" value="33" class="slider" id="myRange">
-        <p class="slider-value"></p>
+    <div class="footer">
+        <a href="https://github.com/Mr-MichaelK?tab=repositories">
+            Copyright © 2024 Mr-MichaelK
+        </a>
     </div>
 </body>
 </html>
