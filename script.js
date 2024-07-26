@@ -2,6 +2,8 @@ let grid = document.querySelector(".etch-a-sketch");
 
 let mode      = "color";   // other modes: erase, rainbow
 let mouseDown = false;
+let eraserOn  = false;
+let rainbowOn = false;
 
 const colors = ["white", "blue", "yellow", "green", "orange", "purple",
                 "black", "brown", "pink", "red", "gray", "cyan"]
@@ -48,16 +50,41 @@ backgroundColorButton.addEventListener("click", () => {
 });
 
 toggleEraser.addEventListener("click", () => {
-    mode = "erase";
+    if (!eraserOn) {
+        mode     = "erase";
+        eraserOn = true;
+        eraserState.textContent = "ON";
+    }
+    else {
+        mode     = "color";
+        eraserOn = false;
+        eraserState.textContent = "OFF";
+    }
 })
 
 toggleRainbow.addEventListener("click", () => {
-    mode = "rainbow";
+    if (!rainbowOn) {
+        mode     = "rainbow";
+        rainbowOn = true;
+        rainbowState.textContent = "ON";
+    }
+    else {
+        mode     = "color";
+        rainbowOn = false;
+        rainbowState.textContent = "OFF";
+    }
 })
 
 // track mouse state
 document.body.onmousedown = () => (mouseDown = true);
-document.body.onmouseup = () => (mouseDown = false);
+document.body.onmouseup   = () => (mouseDown = false);
+
+// toggle eraser and rainbow ON/OFF
+let eraserState  = document.querySelector(".eraser .toggle-state");
+let rainbowState = document.querySelector(".rainbow .toggle-state");
+
+eraserState.textContent  = "OFF";
+rainbowState.textContent = "OFF";
 
 function createGrid() {
     grid.innerHTML = "";

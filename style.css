@@ -54,6 +54,10 @@ body {
     background-color: white;
 }
 
+.toggle-state {
+    color: white;
+}
+
 .upper-container,
 .lower-container {
     display: flex;
