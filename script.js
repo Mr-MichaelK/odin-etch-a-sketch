@@ -38,7 +38,7 @@ backgroundColorIndicator.style.backgroundColor = currentBackgroundColor;
 
 // event listeners
 colorButton.addEventListener("click", () => {
-    mode = "color";
+    //mode = "color";
     changeColor();
     colorIndicator.style.backgroundColor = currentColor;
 });
@@ -54,11 +54,16 @@ toggleEraser.addEventListener("click", () => {
         mode     = "erase";
         eraserOn = true;
         eraserState.textContent = "ON";
+        rainbowOn = false;
+        rainbowState.textContent = "OFF";
     }
     else {
         mode     = "color";
         eraserOn = false;
         eraserState.textContent = "OFF";
+    }
+    if (rainbowOn && !eraserOn) {
+        mode = "rainbow";
     }
 })
 
@@ -67,11 +72,16 @@ toggleRainbow.addEventListener("click", () => {
         mode     = "rainbow";
         rainbowOn = true;
         rainbowState.textContent = "ON";
+        eraserOn = false;
+        eraserState.textContent = "OFF";
     }
     else {
         mode     = "color";
         rainbowOn = false;
         rainbowState.textContent = "OFF";
+    }
+    if (!rainbowOn && eraserOn) {
+        mode = "erase";
     }
 })
 
