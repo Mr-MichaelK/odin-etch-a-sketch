@@ -19,10 +19,6 @@ body {
     gap: 50px;
 }
 
-.title {
-    text-align: center;
-}
-
 .middle-container {
     display: flex;
     justify-content: center;
@@ -118,12 +114,18 @@ body {
     cursor: pointer;
 }
 
+.header,
 .footer {
     background-color: #1a1a1a;
     font-size: 30px;
     padding: 30px;
     color: aliceblue;
     text-align: center;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 40px;
 }
 
 .footer a {
