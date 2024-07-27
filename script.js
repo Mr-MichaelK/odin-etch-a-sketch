@@ -31,6 +31,7 @@ const backgroundColorButton    = document.querySelector(".background-color");
 const backgroundColorIndicator = document.querySelector(".background-color .color-indicator");
 const toggleEraser             = document.querySelector(".eraser");
 const toggleRainbow            = document.querySelector(".rainbow");
+const resetButton              = document.querySelector(".reset");
 
 // modify color indicator colors
 colorIndicator.style.backgroundColor           = currentColor;
@@ -38,7 +39,6 @@ backgroundColorIndicator.style.backgroundColor = currentBackgroundColor;
 
 // event listeners
 colorButton.addEventListener("click", () => {
-    //mode = "color";
     changeColor();
     colorIndicator.style.backgroundColor = currentColor;
 });
@@ -84,6 +84,8 @@ toggleRainbow.addEventListener("click", () => {
         mode = "erase";
     }
 })
+
+resetButton.addEventListener("click", createGrid);
 
 // track mouse state
 document.body.onmousedown = () => (mouseDown = true);
